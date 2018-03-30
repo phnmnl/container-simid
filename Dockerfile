@@ -15,7 +15,7 @@ LABEL license="https://github.com/phnmnl/container-simid/blob/develop/License.tx
 LABEL license="https://github.com/phnmnl/container-simid/blob/master/License.txt"
 LABEL tags="Metabolomics"
 
-ENV simid_REVISION "ac3e948959a6f0298020097449fb59b9d17e0fcc"
+ENV simid_REVISION "0fb7f2c51ca798de5074a2a004cf74b1a106f8d3"
 
 # Setup package repos
 RUN apt-get -y update && apt-get -y --no-install-recommends install r-base-dev libssl-dev \
