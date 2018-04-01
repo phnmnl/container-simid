@@ -21,5 +21,5 @@ library("simid")
 
 library(ncdf4)
 
-metan(infile=opt$input, cdfdir=opt$cdfdir, outdir=opt$output)
+metan(infile=opt$input, cdfdir=opt$cdfdir, fiout=opt$output)
 
