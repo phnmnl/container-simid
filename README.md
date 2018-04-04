@@ -89,14 +89,14 @@ docker run -it -v $PWD:/data simid -i /data/input -o /data/output_dir -z /data/C
 ```
 - example
 ```
-docker run -it -v $PWD:/data simid -i /data/sw620 -z /data/SW620/ -o /data/files/
+docker run -it -v $PWD:/data simid -i /data/sw620 -z /data/SW620/ -o /data/out.csv
 ```
 The working directory could be any directory in the used computer, it is named for the docker image as "/data". It should contain: i) an input data description (in the presented example in the file "sw620"), and ii) a directory containing CDF file (here "/files/"). The output is provided as CSV table in the format exchangeable with Metabolights, here it is named "files/all_info". Whereas the output file is generated automatically and do not require any specific explanation, the first and the last parameters, the format of input data description (here "metdata") and the convention for CDF file names do require explanations, although thes formats made maximally simple for the data provider. They are described below.
 
 - run test1 using the test data (available for reference in [this Google Drive folder](https://drive.google.com/drive/folders/17dBkItF19KjT4b_3-9j6yGMJVcQIWonJ)).
  
 ```
-docker run -it --entrypoint=simidTest1.sh simid
+docker run -it --entrypoint=runTest1.sh simid
 ```
 ## The format of input data description
 
