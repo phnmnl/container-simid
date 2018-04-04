@@ -32,8 +32,8 @@ ADD scripts/runsimid.R /usr/bin/runsimid.R
 RUN chmod +x /usr/bin/runsimid.R
 
 # Add test scripts
-ADD simidTest1.sh /usr/local/bin/simidTest1.sh
-RUN chmod a+x /usr/local/bin/simidTest1.sh
+ADD runTest1.sh /usr/local/bin/runTest1.sh
+RUN chmod a+x /usr/local/bin/runTest1.sh
 # Define Entry point script
 ENTRYPOINT ["runsimid.R"]
 
