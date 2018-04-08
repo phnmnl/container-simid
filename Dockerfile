@@ -20,11 +20,11 @@ ENV simid_REVISION "c35f3716957fc8ad04b79a187636f4dbd6d93254"
 # Setup package repos
 RUN apt-get -y update && apt-get -y --no-install-recommends install r-base-dev libssl-dev \
                                     libcurl4-openssl-dev git \
-                                    libssh2-1-dev r-cran-ncdf4 && \
+                                    libssh2-1-dev libnetcdf-dev r-cran-ncdf4 && \
     echo 'options("repos"="http://cran.rstudio.com")' >> /etc/R/Rprofile.site && \
     R -e "install.packages(c('devtools', 'optparse'))" && \
     R -e 'library(devtools); install_github("seliv55/simid",ref=Sys.getenv("simid_REVISION")[1])' && \
-    apt-get purge -y git r-base-dev libssl-dev libcurl4-openssl-dev libssh2-1-dev && \
+    apt-get purge -y git r-base-dev libssl-dev libcurl4-openssl-dev libssh2-1-dev libnetcdf-dev && \
     apt-get clean && apt-get autoremove -y && rm -rf /var/lib/{apt,dpkg,cache,log}/ /tmp/* /var/tmp/*
 
 # Add scripts folder to container
